@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blue Cat - 30 FT</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="importmap">
+        {
+          "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.164.1/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.164.1/examples/jsm/"
+          }
+        }
+      </script>
+</head>
+
+<body>
+  <div id="loading">
+    <h1 id="loadingtext">LOADING 0%</h1>
+  </div>
+  <div id="navbar">
+    <h1 class="title">
+      BGC 30-Ft
+    </h1>
+    <button id="copy-btn">
+      Copy link
+    </button>
+  </div>
+  <div id="canvas"></div>
+  <div class="color-div">
+    <table>
+      <thead>
+        <tr class="row100 head">
+          <th>Part</th>
+          <th>Color</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="row100 body">
+          <td class="">Rub rails</td>
+          <td>
+            <input type="color" name="RUBRAILS">
+          </td>
+        </tr>
+        <tr class="row100 body">
+          <td>Deck Color</td>
+          <td>
+            <input type="color" name="DECK">
+          </td>
+        </tr>
+        <tr class="row100 body">
+          <td>Console</td>
+          <td>
+            <input type="color" name="CONSOLE">
+          </td>
+        </tr>
+        <tr class="row100 body">
+          <td>Seat deck</td>
+          <td>
+            <input type="color" name="SEATDECK">
+          </td>
+        </tr>
+        <tr class="row100 body">
+          <td>Hull color</td>
+          <td>
+            <input type="color" name="HULL">
+          </td>
+        </tr>
+        <tr class="row100 body">
+          <td>Outboard engines </td>
+          <td>
+            <input type="color" name="MOTOR_SHELL">
+          </td>
+        </tr>
+        <tr class="row100 body">
+          <td>Seating </td>
+          <td>
+            <input type="color" name="SEAT4">
+          </td>
+        </tr>
+        <tr class="row100 body">
+          <td>Aft facing console seats</td>
+          <td>
+            <input type="color" name="SEAT3">
+          </td>
+        </tr>
+        <tr class="row100 body">
+          <td>Forward cushions</td>
+          <td>
+            <input type="color" name="SEAT1">
+          </td>
+        </tr>
+        <tr class="row100 body">
+          <td>Forward facing console seats</td>
+          <td>
+            <input type="color" name="SEAT2">
+          </td>
+        </tr>
+        <tr class="row100 body">
+          <td>Sea deck base</td>
+          <td>
+            <input type="color" name="SEADECK">
+          </td>
+        </tr>
+
+        <tr class="row100 body">
+          <td>Speaker cone </td>
+          <td>
+            <input type="color" name="WHEELBACK">
+          </td>
+        </tr>
+        <tr class="row100 body">
+          <td>Speaker basket </td>
+          <td>
+            <input type="color" name="WHEELFRONT">
+          </td>
+        </tr>
+
+        <tr class="row100 body">
+          <td>Deckside hatches </td>
+          <td>
+            <input type="color" name="DECKSIDEHATCHES">
+          </td>
+        </tr>
+
+        <tr class="row100 body">
+          <td>Base hatches </td>
+          <td>
+            <input type="color" name="BASEHATCHES">
+          </td>
+        </tr>
+        <tr class="row100 body">
+          <td>Hatches below seats and back</td>
+          <td>
+            <input type="color" name="HATCHES_BACK">
+          </td>
+        </tr>
+        <tr class="row100 body">
+          <td>Hatches outline</td>
+          <td>
+            <input type="color" name="LATCHESBORDER">
+          </td>
+        </tr>
+        <tr class="row100 body">
+          <td>Hatches hooks</td>
+          <td>
+            <input type="color" name="HOOKS">
+          </td>
+        </tr>
+        <tr class="row100 body">
+          <td>Base latches</td>
+          <td>
+            <input type="color" name="BASELATCHES">
+          </td>
+        </tr>
+        <tr class="row100 body">
+          <td>Seat latches</td>
+          <td>
+            <input type="color" name="SEATLATCHES">
+          </td>
+        </tr>
+        <tr class="row100 body">
+          <td>Seat side latch</td>
+          <td>
+            <input type="color" name="SEATLATCH">
+          </td>
+        </tr>
+        <tr class="row100 body">
+          <td>Console door</td>
+          <td>
+            <input type="color" name="CONSOLELATCH">
+          </td>
+        </tr>
+        <tr class="row100 body">
+          <td>Dashboard latches</td>
+          <td>
+            <input type="color" name="DASHBOARDLATCHES">
+          </td>
+        </tr>
+        
+        <tr class="row100 body">
+          <td>Foot latches</td>
+          <td>
+            <input type="color" name="FOOTHATCHES">
+          </td>
+        </tr>
+        <tr class="row100 body">
+          <td>Utility Box latch</td>
+          <td>
+            <input type="color" name="UTILITYBOX">
+          </td>
+        </tr>
+
+        <tr class="row100 body">
+          <td>Cup Holder </td>
+          <td>
+            <input type="color" name="CUPHOLDER">
+          </td>
+        </tr>
+        <tr class="row100 body">
+          <td>Steering </td>
+          <td>
+            <input type="color" name="STEERING">
+          </td>
+        </tr>
+        <tr class="row100 body">
+          <td>Steering Center </td>
+          <td>
+            <input type="color" name="STEERCENTER">
+          </td>
+        </tr>
+        <tr class="row100 body">
+          <td>Steering spoke</td>
+          <td>
+            <input type="color" name="STEERBRANCHES">
+          </td>
+        </tr>
+
+        <tr class="row100 body">
+          <td>Control switches - 1 </td>
+          <td>
+            <input type="color" name="CONTROLBUTTONS">
+          </td>
+        </tr>
+
+        <tr class="row100 body">
+          <td>Control switches - 2 </td>
+          <td>
+            <input type="color" name="CONTROLSWITCHES2">
+          </td>
+        </tr>
+        <tr class="row100 body">
+          <td>Fuel guage</td>
+          <td>
+            <input type="color" name="FUEL_GAUGE">
+          </td>
+        </tr>
+
+        <tr class="row100 body">
+          <td>Pipes </td>
+          <td>
+            <input type="color" name="PIPES">
+          </td>
+        </tr>
+        <tr class="row100 body">
+          <td>T Top </td>
+          <td>
+            <input type="color" name="TTOP">
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <script type="module" src="script.js"></script>
+
+</body>
+
+</html>
