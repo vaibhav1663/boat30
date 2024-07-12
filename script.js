@@ -147,7 +147,7 @@ function init() {
     gltfLoader.setDRACOLoader(dracoLoader);
 
     // Load GLTF model
-    gltfLoader.load('models/boat30new.glb', async (gltf) => {
+    gltfLoader.load('models/boat30.glb', async (gltf) => {
         boat = gltf.scene;
         boat.scale.set(5, 5, 5)
         boat.traverse(function (node) {
@@ -176,10 +176,10 @@ function init() {
         colorInputs.forEach(input => {
             const name = input.name;
             const colorFromUrl = urlParams.get(name);
-        
+
             if (colorFromUrl) {
                 input.value = colorFromUrl;
-                
+
                 // Apply the color to the boat
                 if (boat && boat.children[data[name]]) {
                     const originalMaterial = boat.children[data[name]].material;
@@ -189,10 +189,10 @@ function init() {
                 }
             }
         });
-        
+
     }, (onProgress) => {
-        console.log(onProgress.loaded )
-        document.getElementById('loadingtext').innerText = `LOADING ${(onProgress.loaded / 192751.52).toFixed(2)}%`
+        console.log(onProgress.loaded)
+        document.getElementById('loadingtext').innerText = `LOADING ${(onProgress.loaded / 192937.52).toFixed(2)}%`
     }, (error) => {
         alert('An error happened: ', error);
     }
@@ -286,7 +286,7 @@ function render() {
 
     if (!isMobile()) {
         if (boat) {
-            boat.position.y = Math.sin(time) * 0.5 - 1;
+            boat.position.y = Math.sin(time) * 0.5 - 2;
             boat.position.x = Math.sin(time) * 0.01;
             boat.position.z = Math.sin(time) * 0.01;
             boat.rotation.x = Math.sin(time) * 0.05;
